@@ -1,23 +1,13 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+
 
 const DetailView = () => {
-  const [post, setPost] = useState({});
-  const { id } = useParams();
+    return (
+        <div className="card">
+          <h1>id-1</h1>
+          <h2>Lorem ipsum dolor sit amet.</h2>
+          <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia ex ullam a quam praesentium fuga pariatur quas cumque illum? Iste.</h3>
+        </div>
+      )
+    }
 
-  useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-     .then(response => response.json())
-     .then(data => setPost(data));
-  }, [id]);
-
-  return (
-    <div>
-      <h1>1</h1>
-      <h2>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h2>
-      <p>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto</p>
-    </div>
-  );
-};
-
-export default DetailView;
+export default DetailView
